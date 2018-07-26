@@ -9,9 +9,7 @@ case $- in
 esac
 
 # Set git hub personal access token:
-export DUPLEX_SEQ_GITHUB_ACCESS_TOKEN=c025601775465a6e73ff376bf07ed140ccfaab73
-export DUPLEX_SEQ_GITHUB_USER=fangylo
-export PAGER=less
+
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options

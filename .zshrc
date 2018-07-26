@@ -173,9 +173,7 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # Set git hub personal access token:
-export DUPLEX_SEQ_GITHUB_ACCESS_TOKEN=c025601775465a6e73ff376bf07ed140ccfaab73
-export DUPLEX_SEQ_GITHUB_USER=fangylo
-export PAGER=less
+
 
 
 # added by Anaconda3 installer
