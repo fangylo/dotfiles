@@ -6,7 +6,6 @@ if [[ ! -d $HOME/.oh-my-zsh ]]; then
   git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/home/$(whoami)/.oh-my-zsh
 
