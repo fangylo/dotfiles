@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 if [[ ! -d $HOME/.oh-my-zsh ]]; then
-	echo "oh-my-zsh is not installed!"
-	echo "Downloading and installing..."
-	echo "Cloning oh-my-zsh..."
-	git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+  echo "oh-my-zsh is not installed"
+  echo "Downloading and installing..."
+  echo "Cloning oh-my-zsh..."
+  git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
 fi
 
 
@@ -26,6 +26,7 @@ source /etc/profile
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ ( -f /usr/bin/direnv ) ]] && eval "$(direnv hook zsh)"
 
+mkdir -p ~/.zfunctions
 
 autoload -Uz up-line-or-beginning-search down-line-or-beginning-search
 zle -N up-line-or-beginning-search
@@ -36,9 +37,9 @@ zle -N down-line-or-beginning-search
 
 
 if [[ ! -d $HOME/.antigen ]]; then
-	echo "antigen is not installed!"
-	echo "Downloading and installing..."
-	curl -L git.io/antigen > $HOME/.zfunctions/antigen.zsh
+  echo "antigen is not installed!"
+  echo "Downloading and installing..."
+  curl -L git.io/antigen > $HOME/.zfunctions/antigen.zsh
 fi
 
 source $HOME/.zfunctions/antigen.zsh
@@ -48,6 +49,8 @@ source $HOME/.zfunctions/antigen.zsh
 # antigen bundle sindresorhus/pure
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen apply
+
+
 # https://github.com/getantibody/antibody
 # antibody bundle mafredri/zsh-async
 # antibody bundle sindresorhus/pure
@@ -168,19 +171,19 @@ export HISTSIZE=100000
 export HISTIGNORE="&:ls:[bf]g:exit"
 
 # PROMPT ######################################################################
-ZSH_THEME=""
-autoload -U promptinit; promptinit
-prompt pure
+# ZSH_THEME=""
+# autoload -U promptinit; promptinit
+# prompt pure
 
 # Set git hub personal access token:
 
-
+ZSH_THEME="robbyrussell"
 
 # added by Anaconda3 installer
 export PATH="$HOME/bin:/home/fyl/anaconda3/bin:$PATH"
 
 # Install Pure prompt
-fpath+=('/usr/local/lib/node_modules/pure-prompt/functions')
+# fpath+=('/usr/local/lib/node_modules/pure-prompt/functions')
 
 
-[[ ( -f ${HOME}/bin/mutagen ) ]] && mutagen daemon start # Mutagen (https://mutagen.io/)
+# [[ ( -f ${HOME}/bin/mutagen ) ]] && mutagen daemon start # Mutagen (https://mutagen.io/)
