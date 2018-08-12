@@ -21,6 +21,10 @@ fpath=( "${HOME}/.zfunctions" $fpath )
 
 source "${ZSH}/oh-my-zsh.sh"
 source /etc/profile
+
+# Solving MAC OS problem b/c of brew installed coreutils after installing oh-my-zsh
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH" 
+
 # source <( cat ~/.dotfiles/bash-functions/* )
 # source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ ( -f /usr/bin/direnv ) ]] && eval "$(direnv hook zsh)"
@@ -186,3 +190,4 @@ export PATH="$HOME/bin:/home/fyl/anaconda3/bin:$PATH"
 
 
 # [[ ( -f ${HOME}/bin/mutagen ) ]] && mutagen daemon start # Mutagen (https://mutagen.io/)
+
